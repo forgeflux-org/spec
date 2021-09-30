@@ -8,6 +8,7 @@ the global-owner repository and when state changes are made on
 forge-local copies, each copy aims to be eventually consistent, i.e,
 state is synchronised is whichever order they arrive at the bridge.
 
+
 ## Terminology
 
 -   **Interface:** A bridge component that talks the bridge protocol and is
@@ -27,7 +28,7 @@ state is synchronised is whichever order they arrive at the bridge.
     main forge(OAuth access, etc.) and also have a namespace on the
     forge where they can host forked repositories.
 
--   **Main-interface copy:** A forked copy the main copy. These is managed
+-   **Main-interface copy:** A forked copy the main copy. These are managed
     by the main interface and is used to pass on changes from other
     contributors to the main copy.
 
@@ -51,7 +52,7 @@ state is synchronised is whichever order they arrive at the bridge.
 
 ![ownership diagram](./res/ownership-relationship.png)
 
-## Architecture and mechanism
+## Commit mechanism
 
 1. Contributor requests `local interface` to fork a repository not local to their forge
 
@@ -73,3 +74,18 @@ state is synchronised is whichever order they arrive at the bridge.
    PR/sends patch to `main copy`.
 
 9. Creator verifies the patch and applies it to `main copy`
+
+## Bridging policy
+
+Bridges is divided into two components for separations of concerns.
+There are many types of software forges(Gitea, GitLab, etc.) and it is
+impossible to implement a monolithic bridge for all combinations of
+forges. Development workflows are also different across forges. Some
+forges use email-based workflows while some use pull requests. It is
+also possible that a forge might use a combination of software: a
+separate bug tracker service and separate read and write interfaces for
+the repositories that it hosts. 
+
+Therefore, with this protocol, we aim to set policy for bridging and not
+the mechanism. Bridge implementers are requested to decide upon
+implementation details at their discretion.
