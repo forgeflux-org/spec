@@ -14,7 +14,7 @@ implementers.
 
 ## Requirements
 
-This protocol must support the following features are required for
+This protocol must support the following features which are required for
 to enable comfortable development workflows:
 
 -   Facilitate sending and receiving patches or pull requests
