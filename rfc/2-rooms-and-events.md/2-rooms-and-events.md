@@ -2,7 +2,7 @@
 
 ## Summary
 
-This RFC proposes a model of sharing data in the Forge Fed protocol
+This RFC proposes a model of sharing data in the Forgeflux protocol
 through a concept of rooms and events. A room can be subscribed to,
 unsubscribed from and can contain nested rooms, which themselves are
 fully capable as parent rooms. Events are used to describe various types
@@ -48,7 +48,7 @@ instance `f.event.patch`.
 
 ## Rooms
 
-Rooms are the basic channels of communication in the Forge Fed protocol.
+Rooms are the basic channels of communication in the Forgeflux protocol.
 All forge-activity should be modeled based on rooms. Rooms are
 identified based on the `main forge` but all `main interfaces` should be
 capable of accommodating subscribing non-native interfaces.
