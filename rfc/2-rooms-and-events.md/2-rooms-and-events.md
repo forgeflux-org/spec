@@ -2,7 +2,7 @@
 
 ## Summary
 
-This RFC proposes a model of sharing data in the Forge Fed protocol
+This RFC proposes a model of sharing data in the ForgeFlux protocol
 through a concept of rooms and events. A room can be subscribed to,
 unsubscribed from and can contain nested rooms, which themselves are
 fully capable as parent rooms. Events are used to describe various types
@@ -43,12 +43,12 @@ Event values must be uniquely globally namespaced following Java's
 [package naming
 conventions](https://en.wikipedia.org/wiki/Java_package#Package_naming_conventions),
 e.g. `com.example.com.myapp.event`. The special top-level namespace `f.`
-is resolved for events resolved in the Forge Fed specification - for
+is resolved for events resolved in the ForgeFlux specification - for
 instance `f.event.patch`.
 
 ## Rooms
 
-Rooms are the basic channels of communication in the Forge Fed protocol.
+Rooms are the basic channels of communication in the ForgeFlux protocol.
 All forge-activity should be modeled based on rooms. Rooms are
 identified based on the `main forge` but all `main interfaces` should be
 capable of accommodating subscribing non-native interfaces.
@@ -82,7 +82,7 @@ Types values must be uniquely globally namespaced following Java's
 [package naming
 conventions](https://en.wikipedia.org/wiki/Java_package#Package_naming_conventions),
 e.g. `com.example.com.myapp.room_type`. The special top-level namespace `f.`
-is resolved for types resolved in the Forge Fed specification - for
+is resolved for types resolved in the ForgeFlux specification - for
 instance `f.room.contributions`.
 
 ## References
